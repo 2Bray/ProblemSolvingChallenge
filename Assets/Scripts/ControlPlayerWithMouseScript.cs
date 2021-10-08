@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControlPlayerWithMouseScript : MonoBehaviour
 {
-    private float speed = 1f;
+    private float speed = 0.01f;
     private Rigidbody2D playerRb;
 
 
@@ -16,8 +16,9 @@ public class ControlPlayerWithMouseScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Pergerakan player
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = transform.position.z;
-        playerRb.AddForce( mousePosition * speed * Time.deltaTime, ForceMode2D.Impulse);
+        playerRb.MovePosition(Vector3.Lerp(transform.position, mousePosition, speed));
     }
 }

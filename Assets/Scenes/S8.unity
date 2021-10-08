@@ -440,7 +440,7 @@ MonoBehaviour:
   - {fileID: 56139103}
   - {fileID: 1231783683}
   scoreIndikator: {fileID: 709359926}
-  Player: {fileID: 693891020}
+  Player: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

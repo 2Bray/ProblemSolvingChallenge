@@ -66,10 +66,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ControlPlayerScript.cs" />
     <Compile Include="Assets\Scripts\ControlPlayerWithMouseScript.cs" />
+    <Compile Include="Assets\Scripts\FoodControllerGameScript.cs" />
     <Compile Include="Assets\Scripts\FoodControllerScript.cs" />
+    <Compile Include="Assets\Scripts\FoodInGameScript.cs" />
     <Compile Include="Assets\Scripts\FoodScript.cs" />
+    <Compile Include="Assets\Scripts\GameControllerScript.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMoveToFood.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/HP/Documents/UnityProject/ProblemSolvingChallenge/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
