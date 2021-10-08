@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ControlPlayerScript.cs" />
+    <Compile Include="Assets\Scripts\ControlPlayerWithMouseScript.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/HP/Documents/UnityProject/ProblemSolvingChallenge/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
