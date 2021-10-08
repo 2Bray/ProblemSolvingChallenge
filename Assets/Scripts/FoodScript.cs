@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class FoodScript : MonoBehaviour
 {
+    public FoodControllerScript foodControl;
+    public int idx;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player") Destroy(gameObject);
+        //Memanggil method PlayerGetFood dan mengirim index object ini
+        //Saat object ini bersentuhan dengan object player
+        if (collision.tag == "Player") foodControl.PlayerGetFood(idx);
     }
 }

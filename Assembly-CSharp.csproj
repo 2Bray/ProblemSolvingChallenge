@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\FoodControllerScript.cs" />
     <Compile Include="Assets\Scripts\FoodScript.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerMoveToFood.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/HP/Documents/UnityProject/ProblemSolvingChallenge/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
