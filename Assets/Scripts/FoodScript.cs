@@ -11,6 +11,6 @@ public class FoodScript : MonoBehaviour
     {
         //Memanggil method PlayerGetFood dan mengirim index object ini
         //Saat object ini bersentuhan dengan object player
-        if (collision.tag == "Player") foodControl.PlayerGetFood(idx);
+        if (collision.tag == "Player") foodControl.PlayerGetFood(gameObject);
     }
 }

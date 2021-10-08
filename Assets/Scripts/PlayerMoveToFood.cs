@@ -27,14 +27,17 @@ public class PlayerMoveToFood : MonoBehaviour
         }
     }
 
-    public void GetFood(Text indikator, int idx)
+    public void GetFood(Text indikator, bool get)
     {
         //Menambahkan Score jika player mendapatkan food
-        score++;
-        indikator.text = "Score: " + score;
-
-        //Mengeset target yang barusaja didapat menjadi non aktif
-        target[idx].gameObject.SetActive(false);
+        //Jika method dipanggil saat food didapat
+        if (get)
+        {
+            score++;
+            indikator.text = "Score: " + score;
+        }
+        //Jika nilai get = false, artinya method dipanggil saat suatu object food diaktifkan
+        //Maka lewati bagian penambahan score
 
         int i = 0;
         foreach(Transform item in target)

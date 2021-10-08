@@ -40,9 +40,31 @@ public class FoodControllerScript : MonoBehaviour
         Player.enabled = true;
     }
 
-    //Mengirim nomor index food yang barusaja didapat kepada object player
-    public void PlayerGetFood(int idx)
+    //Menonaktifkan object food, dan memanggil method GetFood pada player object
+    public void PlayerGetFood(GameObject food)
     {
-        Player.GetFood(scoreIndikator, idx);
+        food.SetActive(false);
+
+        //boolean get pada GetFood kita kirim nilai true
+        //Karena method ini dipanggil saat player mendapatkan food
+        Player.GetFood(scoreIndikator, true);
+
+        //Memulai perhitungan untuk memunculkan kembali object food
+        StartCoroutine(setActive(food));
     }
+
+    private IEnumerator setActive(GameObject food)
+    {
+        yield return new WaitForSecondsRealtime(3f);
+
+        //Memunculkan kembali object food Dan mengacak posisinya juga
+        float posX = Random.Range(walls[3].position.x + 1, walls[1].position.x - 1);
+        float posY = Random.Range(walls[2].position.y + 1, walls[0].position.y - 1);
+        food.transform.position = new Vector3(posX, posY, 0);
+        food.SetActive(true);
+
+        //Pemanggilan fungsi ini agar object player kembali mengejar food
+        Player.GetFood(scoreIndikator, false);
+    }
+        
 }
